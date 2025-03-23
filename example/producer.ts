@@ -20,7 +20,7 @@ async function publishCsvToKafka(topic: string): Promise<void> {
     await producer.connect();
     console.log("Kafka Producer connected");
 
-    const batchSize = 1000;
+    const batchSize = 1;
     let batch: Message[] = [];
     let count = 0;
     const startTime = new Date();

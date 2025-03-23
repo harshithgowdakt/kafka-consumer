@@ -11,7 +11,7 @@ async function bootstrap(): Promise<void> {
 process.env.TZ = "UTC";
 const logger = new Logger("Bootstrap");
 bootstrap()
-    .then(() => logger.log(`[Nest Server Started]`))
+    .then(() => logger.log(`Nest Server Started`))
     .catch((error) =>
         logger.error(`Error while starting the application ${error}`),
     );

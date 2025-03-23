@@ -29,7 +29,9 @@
    npm install
    ```
 
-6. **Start the project**
+6. **Create a click house table using click-house.sql**
+
+7. **Start the project**
    ```bash
    npm run start
    ```

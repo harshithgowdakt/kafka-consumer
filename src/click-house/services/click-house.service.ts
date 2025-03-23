@@ -27,7 +27,7 @@ export class ClickHouseService implements OnModuleInit, OnModuleDestroy {
         private readonly redisService: RedisService,
     ) {
         this.client = createClient({
-            host: this.configService.getOrThrow("CLICKHOUSE_HOST"),
+            url: this.configService.getOrThrow("CLICKHOUSE_HOST"),
             username: this.configService.getOrThrow("CLICKHOUSE_USERNAME"),
             password: this.configService.getOrThrow("CLICKHOUSE_PASSWORD"),
             database: this.configService.getOrThrow("CLICKHOUSE_DATABASE"),

@@ -21,5 +21,6 @@ export const redisProviders: Provider[] = [
             await client.connect();
             return client;
         },
+        inject: [ConfigService],
     },
 ];

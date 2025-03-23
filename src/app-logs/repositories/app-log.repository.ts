@@ -7,6 +7,7 @@ import { Utils } from "../../shared/utils/utils";
 @Injectable()
 export class AppLogRepository {
     private readonly logger = new Logger(AppLogRepository.name);
+
     constructor(private readonly clickHouseService: ClickHouseService) {}
 
     public async batchInsertToClickhouse<T = any>(logs: T[]): Promise<void> {

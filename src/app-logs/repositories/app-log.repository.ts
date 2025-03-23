@@ -1,12 +1,12 @@
 import { Injectable, Logger } from "@nestjs/common";
 
-import { ClickHouseService } from "../../clickhouse/services/clickhouse.service";
+import { ClickHouseService } from "../../click-house/services/click-house.service";
 import { AppLogsTable } from "../../shared/constants/constants";
 import { Utils } from "../../shared/utils/utils";
 
 @Injectable()
-export class AppEventLogRepository {
-    private readonly logger = new Logger(AppEventLogRepository.name);
+export class AppLogRepository {
+    private readonly logger = new Logger(AppLogRepository.name);
     constructor(private readonly clickHouseService: ClickHouseService) {}
 
     public async batchInsertToClickhouse<T = any>(logs: T[]): Promise<void> {

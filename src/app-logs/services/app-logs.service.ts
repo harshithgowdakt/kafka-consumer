@@ -10,20 +10,17 @@ import {
     ConsumerResumeInterval,
     KafkaBaseTopic,
 } from "../../shared/constants/constants";
-import { AppEventLogRepository } from "../repositories/app-log.repository";
+import { AppLogRepository } from "../repositories/app-log.repository";
 import { AppLogUtils } from "../utils/app-log.utils";
 
 @Injectable()
-export class AppEventLogService
-    extends BaseKafkaService
-    implements OnModuleInit
-{
-    private readonly logger = new Logger(AppEventLogService.name);
+export class AppLogService extends BaseKafkaService implements OnModuleInit {
+    private readonly logger = new Logger(AppLogService.name);
     private readonly consumer: Consumer;
     private breaker: CircuitBreaker;
 
     constructor(
-        private readonly appEventLogRepository: AppEventLogRepository,
+        private readonly appLogRepository: AppLogRepository,
         configService: ConfigService,
     ) {
         super(configService);
@@ -168,7 +165,7 @@ export class AppEventLogService
     }
 
     private async commitBatch(batch: Batch, logs: any[]): Promise<void> {
-        await this.appEventLogRepository.batchInsertToClickhouse(logs);
+        await this.appLogRepository.batchInsertToClickhouse(logs);
         await this.consumer.commitOffsets([
             {
                 topic: batch.topic,

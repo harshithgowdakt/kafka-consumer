@@ -1,6 +1,6 @@
 import { Module } from "@nestjs/common";
 
-import { ClickHouseService } from "./services/clickhouse.service";
+import { ClickHouseService } from "./services/click-house.service";
 import { RedisModule } from "../redis/redis.module";
 
 @Module({

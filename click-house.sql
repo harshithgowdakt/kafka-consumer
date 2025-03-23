@@ -3,7 +3,7 @@ CREATE TABLE IF NOT EXISTS app_logs (
     `lvl` LowCardinality(String),
     `msg` Nullable(String),
     `hostname` Nullable(String),
-    `env` Nullable(String)
+    `env` Nullable(String),
     `app_name` Nullable(String),
 )
 ENGINE = MergeTree()

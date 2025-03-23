@@ -1,6 +1,6 @@
 import { Injectable, Logger } from "@nestjs/common";
 
-import { ClickHouseService } from "../../clickhouse/clickhouse.service";
+import { ClickHouseService } from "../../clickhouse/services/clickhouse.service";
 import { AppLogsTable } from "../../shared/constants/constants";
 import { Utils } from "../../shared/utils/utils";
 

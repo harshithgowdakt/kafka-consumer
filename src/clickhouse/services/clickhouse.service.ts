@@ -11,9 +11,9 @@ import {
 } from "@nestjs/common";
 import { ConfigService } from "@nestjs/config";
 
-import { RedisService } from "../redis/services/redis.service";
-import { NodeEnv } from "../shared/constants/constants";
-import { Utils } from "../shared/utils/utils";
+import { RedisService } from "../../redis/services/redis.service";
+import { NodeEnv } from "../../shared/constants/constants";
+import { Utils } from "../../shared/utils/utils";
 
 @Injectable()
 export class ClickHouseService implements OnModuleInit, OnModuleDestroy {

@@ -1,4 +1,5 @@
 import { Module } from "@nestjs/common";
+
 import { redisProviders } from "./providers/redis.providers";
 
 @Module({

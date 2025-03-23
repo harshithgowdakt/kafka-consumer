@@ -2,12 +2,12 @@ import { Logger, Provider } from "@nestjs/common";
 import { ConfigService } from "@nestjs/config";
 import { createClient } from "redis";
 
-export const REDIS_CLIENT = "REDIS_CLIENT";
+export const RedisClient = "REDIS_CLIENT";
 
 export const redisProviders: Provider[] = [
     {
-        provide: REDIS_CLIENT,
-        useFactory: async (configService: ConfigService) => {
+        provide: RedisClient,
+        useFactory: async (configService: ConfigService): Promise<any> => {
             const logger = new Logger("RedisProvider");
 
             const client = createClient({

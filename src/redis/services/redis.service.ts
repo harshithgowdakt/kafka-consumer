@@ -1,13 +1,14 @@
 import { Inject, Injectable, Logger } from "@nestjs/common";
 import { RedisClientType } from "redis";
-import { REDIS_CLIENT } from "../providers/redis.providers";
+
+import { RedisClient } from "../providers/redis.providers";
 
 @Injectable()
 export class RedisService {
     private readonly logger = new Logger(RedisService.name);
 
     constructor(
-        @Inject(REDIS_CLIENT)
+        @Inject(RedisClient)
         private readonly redisClient: RedisClientType,
     ) {}
 

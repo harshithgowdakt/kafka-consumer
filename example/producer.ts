@@ -2,8 +2,8 @@ import { Kafka, Producer, Message } from "kafkajs";
 
 interface AppLog {
     timestamp: string;
-    lvl: string;
-    msg: string;
+    level: string;
+    message: string;
     appName: string;
     hostname: string;
     env: string;
@@ -26,15 +26,15 @@ async function publishCsvToKafka(topic: string): Promise<void> {
     const startTime = new Date();
 
     try {
-        for (let index = 0; index < 1; index++) {
+        for (let index = 0; index < 1000; index++) {
             const eventTime = new Date(
                 startTime.getTime() + index * 1000,
             ).toISOString();
 
             const formattedRow: AppLog = {
                 timestamp: eventTime,
-                lvl: "INFO",
-                msg: `Event ${index} occurred.`,
+                level: "INFO",
+                message: `Event ${index} occurred.`,
                 appName: "local-app",
                 hostname: "localhost",
                 env: "local",

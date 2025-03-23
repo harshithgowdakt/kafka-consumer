@@ -124,7 +124,7 @@ export class AppLogService extends BaseKafkaService implements OnModuleInit {
         for (const message of batch.messages) {
             try {
                 const event = JSON.parse(message?.value?.toString() || "");
-                const env = event.t;
+                const env = event.env;
 
                 const currentTime = new Date();
                 const eventTime = event?.time

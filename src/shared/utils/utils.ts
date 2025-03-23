@@ -44,7 +44,7 @@ export class Utils {
         return crypto.createHash("sha256").update(values).digest("hex");
     }
 
-    static formatDateTimeForClickHouse(date: Date): string {
+    static formatDateTimeForClickHouse(date: string): string {
         // Convert the date to UTC and format it as 'YYYY-MM-DD HH:mm:ss'
         return moment(date).utc().format("YYYY-MM-DD HH:mm:ss.SSS");
     }

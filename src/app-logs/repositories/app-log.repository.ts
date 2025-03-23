@@ -11,6 +11,10 @@ export class AppLogRepository {
 
     public async batchInsertToClickhouse<T = any>(logs: T[]): Promise<void> {
         try {
+            if (!logs.length) {
+                this.logger.debug(`No logs to insert to clickhouse`);
+                return;
+            }
             this.logger.debug(`inserting the app logs to clickhouse`);
             await Utils.retryOperation(async () => {
                 await this.clickHouseService.insert(AppLogsTable, logs);

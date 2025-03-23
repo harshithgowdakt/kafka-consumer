@@ -5,7 +5,7 @@ export class AppLogUtils {
         return {
             timestamp:
                 Utils.formatDateTimeForClickHouse(log.timestamp) ??
-                Utils.formatDateTimeForClickHouse(new Date()),
+                Utils.formatDateTimeForClickHouse(new Date().toISOString()),
             app_name: log.appName,
             env: log.env,
             hostname: log.hostname,

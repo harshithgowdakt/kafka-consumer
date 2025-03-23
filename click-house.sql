@@ -1,5 +1,5 @@
 CREATE TABLE IF NOT EXISTS app_logs (
-    `log_timestamp` DateTime64(3, 'Asia/Kolkata'),
+    `log_timestamp` DateTime64(0),
     `lvl` LowCardinality(String),
     `msg` Nullable(String),
     `hostname` Nullable(String),

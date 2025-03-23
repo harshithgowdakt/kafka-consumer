@@ -3,7 +3,7 @@ import { ConfigService } from "@nestjs/config";
 import { Message, Producer } from "kafkajs";
 
 import { BaseKafkaService } from "./base-kafka.service";
-import { Utils } from "../../shared/utils";
+import { Utils } from "../../shared/utils/utils";
 
 @Injectable()
 export class KafkaProducerService

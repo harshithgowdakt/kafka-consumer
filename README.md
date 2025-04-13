@@ -37,10 +37,3 @@
    ```
 
 ---
-
-## ✅ Dev Notes
-
-- **Linting:** ESLint runs automatically before commit (via Husky)
-- **Formatting:** Prettier is the standard formatter
-- **EditorConfig:** Ensures consistent indentation & encoding
-- **Testing:** All changes require passing **unit** or **E2E tests**

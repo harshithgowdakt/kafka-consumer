@@ -2,7 +2,7 @@
 
 - **NestJS** – Backend framework  
 - **ClickHouse DB** – Analytics storage  
-- **Kafka** – stream proccessing
+- **Kafka** – stream processing
 
 ---
 

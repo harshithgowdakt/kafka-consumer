@@ -6,7 +6,7 @@ export enum NodeEnv {
 }
 
 export const CircuitBreakerConfig = {
-    timeout: 60000, // If the query takes longer than  1 minutes, trigger failure
+    timeout: 60000, // If the query takes longer than  1 minute, trigger failure
     errorThresholdPercentage: 50, // Open the circuit if 50% of queries fail
     resetTimeout: 30000, // Wait for 30 seconds before attempting to close the circuit
 };

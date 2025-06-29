@@ -22,7 +22,7 @@ export class RedisService {
 
     async getValue(key: string): Promise<string | null> {
         try {
-            return this.redisClient.get(key);
+            return await this.redisClient.get(key);
         } catch (error) {
             this.logger.warn(`Error getting value from Redis: ${error}`);
             return null;

@@ -40,7 +40,7 @@ export class ClickHouseService implements OnModuleInit, OnModuleDestroy {
             application: "app-logs-consumer",
         });
         this.cacheExpiryTime =
-            this.configService.get<number>("REDIS_TTL") ?? 2 * 60 * 1000; // 2 minutes
+            this.configService.get<number>("REDIS_TTL") ?? 2 * 60; // 2 minutes in seconds
         this.environment =
             this.configService.get<string>("NODE_ENV") ?? NodeEnv.LOCAL;
     }

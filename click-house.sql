@@ -4,7 +4,7 @@ CREATE TABLE IF NOT EXISTS app_logs (
     `msg` Nullable(String),
     `hostname` Nullable(String),
     `env` Nullable(String),
-    `app_name` Nullable(String),
+    `app_name` Nullable(String)
 )
 ENGINE = MergeTree()
 PARTITION BY toYYYYMM(log_timestamp)

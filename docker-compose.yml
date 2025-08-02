@@ -39,7 +39,6 @@ services:
 
   clickhouse:
     image: clickhouse/clickhouse-server:25.2.2.39
-    restart: unless-stopped
     ports:
       - "8123:8123"  # HTTP interface
       - "9000:9000"  # Native client interface
